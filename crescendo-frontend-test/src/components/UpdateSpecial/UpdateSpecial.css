@@ -1,0 +1,64 @@
+.page__header {
+    font-size: 2em;
+    position: relative;
+    top: -1.1em;
+    text-align: center;
+}
+
+.special__updateFormContainer--main {
+    padding: 5em 0 0 0;
+    font-size: 1.2em;
+}
+
+.updateSpecialForm__container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateSpecialForm__label {
+    padding: 1em 0;
+    font-weight: bold;
+}
+
+.updateSpecialForm__btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 100px;
+    transition: all .3s;
+    margin: 0.5em 0;
+    background-color: #0ABF46;
+    color: white;
+    align-self: center;
+}
+
+.updateSpecialForm__btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.updateSpecialForm__input {
+    padding: 0.5em 0;
+}
+
+@media screen and (min-width: 600px) {
+    .page__header {
+        font-size: 2.1em;
+        top: -1.5em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .updateSpecialForm__btn {
+        padding: 20px 40px;
+    }
+
+    .updateSpecialForm__container {
+        padding: 1em 10em;
+        display: flex;
+        flex-direction: column;
+    }
+}

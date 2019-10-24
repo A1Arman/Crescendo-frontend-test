@@ -1,0 +1,77 @@
+.page__header--add {
+    font-size: 2em;
+    position: relative;
+    top: 1.75em;
+    text-align: center;
+}
+
+.addRecipeForm {
+    padding-top: 7.5em;
+}
+
+.addRecipeForm__container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.addRecipeForm__label {
+    padding: 1em 0;
+    font-weight: bold;
+}
+
+.addRecipeForm__container--update {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addRecipeForm__btn, .addRecipeForm__btn--submit {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 100px;
+    transition: all .3s;
+    margin: 0.5em 0;
+    color: white;
+    align-self: center;
+}
+
+.addRecipeForm__btn {
+    background-color: #0ABF46;
+}
+
+.addRecipeForm__btn:hover, .addRecipeForm__btn--submit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+}
+
+.addRecipeForm__input {
+    padding: 0.5em 0;
+}
+
+.green {
+    background-color: #0ABF46;
+}
+
+.red {
+    background-color: rgb(233, 60, 60);
+}
+
+.addRecipeForm__subBtnContainer {
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .addRecipeForm__btn, .addRecipeForm__btn--submit {
+        padding: 20px 40px;
+    }
+
+    .addRecipeForm__container {
+        padding: 1em 10em;
+        display: flex;
+        flex-direction: column;
+    }
+}
+

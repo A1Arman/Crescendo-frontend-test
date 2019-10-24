@@ -1,0 +1,120 @@
+.page__header--recipe {
+    font-size: 2.5em;
+    position: relative;
+    top: -2em;
+    text-align: center;
+}
+
+.recipe__container--main {
+    padding: 7.5em 0 0 0;
+    font-size: 1.2em;
+}
+
+.recipe__container {
+    padding-left: 10px;
+}
+
+.recipe__container--general {
+    display: grid;
+    grid-template-areas: 'image image'
+                         'title title'
+                         'update update'
+                         'description description'
+                         'cook prep'
+                         'total yield';
+    text-align: center;
+}
+
+.recipe__title {
+    grid-area: title;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.recipe__updateBtn {
+    grid-area: update;
+    text-align: center;
+    margin: 1em 7.5em;
+    background-color: #0ABF46;
+    color: white;
+}
+
+.recipe__container--ingredients {
+    padding: 2em 1em;
+}
+
+.recipe__imageContainer {
+    grid-area: image;
+}
+
+.recipe__image {
+    align-self: center;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.recipe__ingredients, .recipe__directions {
+    border-bottom: 1px solid #9e9e9e;
+    padding: 1em;
+}
+
+.recipe__ingredient--content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.recipe__bold, .recipe__ingredient--name {
+    font-weight: bold;
+}
+
+.recipe__description {
+    text-align: center;
+    grid-area: description;
+    padding-bottom: 1em;
+}
+
+.recipe__container--title {
+    padding: 1em 0 1em 0.5em;
+}
+
+.recipe__container--directions {
+    padding: 0 0 0 1em;
+}
+
+.recipe__direction--index {
+    padding-bottom: 0.5em;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .page__header--recipe {
+        font-size: 2.1em;
+        top: -2.65em;
+    }
+
+    .recipe__updateBtn {
+        margin: 1em 12.5em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .recipe__image {
+        align-self: center;
+        width: 450px;
+        border-radius: 5px;
+    }
+    .recipe__updateBtn {
+        margin: 1em 30em;
+    }
+
+    .updateRecipeForm__container--update {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .udpateRecipeForm__btn {
+        padding: 20px 40px;
+    }
+}

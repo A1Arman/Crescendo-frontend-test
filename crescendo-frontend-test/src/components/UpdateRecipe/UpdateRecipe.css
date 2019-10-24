@@ -1,0 +1,55 @@
+.recipe__updateFormContainer--main {
+    padding: 5em 0 0 0;
+    font-size: 1.2em;
+}
+
+.updateRecipeForm__container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateRecipeForm__label {
+    padding: 1em 0;
+    font-weight: bold;
+}
+
+.updateRecipeForm__container--update {
+    display: flex;
+    justify-content: space-between;
+}
+
+.udpateRecipeForm__btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 100px;
+    transition: all .3s;
+    margin: 0.5em 0;
+    background-color: #0ABF46;
+    color: white;
+    align-self: center;
+}
+
+.udpateRecipeForm__btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.updateRecipeForm__input {
+    padding: 0.5em 0;
+}
+
+@media screen and (min-width: 992px) {
+    .udpateRecipeForm__btn {
+        padding: 20px 40px;
+    }
+
+    .updateRecipeForm__container {
+        padding: 1em 10em;
+        display: flex;
+        flex-direction: column;
+    }
+}

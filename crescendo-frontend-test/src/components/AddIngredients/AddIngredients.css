@@ -1,0 +1,125 @@
+.modalWrapper {
+    background: white;
+    border: 0.1rem solid #d0cccc;
+    box-shadow: 0 0.5rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.7rem 2rem 0 rgba(0,0,0,0.17);
+    margin: 7.5rem auto 0;
+    transition: all .5s;
+    transform: translateY(-3rem);
+    animation: down 250ms linear forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.ingredientForm__container {
+    display: grid;
+}
+
+.modalHeader {
+    background: #0ABF46;
+    line-height: 4rem;
+    padding: 0.25rem;
+}
+
+.modalHeader__title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.modalBody {
+    position: relative;
+    padding: 0.25rem 1rem;
+    transform: translateY(6rem);
+    animation: up 250ms linear forwards;
+    z-index: 1;
+}
+
+.modalFooter {
+    background: #0ABF46;
+    height: 3.5rem;
+    padding: 1rem;
+}
+
+.ingredientForm__btn {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.ingredientForm__message {
+    text-align: center;
+}
+
+.cancelBtn {
+    background-color: #034017;
+    float: left;
+}
+
+.subBtn {
+    background-color: #034017;
+    float: right;
+}
+
+.ingredientForm__label {
+    text-align: initial;
+    margin-bottom: 0.5rem;
+}
+
+.ingredientForm__input {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0.75rem;
+}
+
+.back-drop {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1.3s;
+}
+
+@keyframes up {
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translateY(-3);
+    }
+    
+    0% {
+		transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 600px) {
+    .modalWrapper {
+        background: white;
+        border: 0.1rem solid #d0cccc;
+        box-shadow: 0 0.5rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.7rem 2rem 0 rgba(0,0,0,0.17);
+        margin: 7.5rem 1.5em 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .modalWrapper {
+        background: white;
+        border: 0.1rem solid #d0cccc;
+        box-shadow: 0 0.5rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.7rem 2rem 0 rgba(0,0,0,0.17);
+        margin: 7.5rem 10em 0;
+    }
+}
+

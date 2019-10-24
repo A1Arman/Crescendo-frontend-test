@@ -1,0 +1,64 @@
+.specialsList__container--main {
+    padding: 10em 0 0 0;
+}
+
+.specialsList__container {
+    display: grid;
+    grid-template-areas: 'title content';
+    grid-template-columns: 160px auto;
+    border-bottom: 1px solid #9e9e9e;
+    border-top: 1px solid #9e9e9e;
+}
+
+.specialsList__container--title {
+    grid-area: title;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialsList__container--content {
+    font-size: 1.2em;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.specialsList__btn {
+    margin: 1em 0;
+    background-color: #0ABF46;
+    color: white;
+    align-self: center;
+}
+
+.specialsList__text {
+    padding: 10px 2px;
+}
+
+.specialsList__type {
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    .specialsList__container {
+        grid-template-columns: 300px auto;
+    }
+
+    .specialsList__container--title {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .specialsList__container {
+        grid-template-columns: 500px 500px;
+        grid-gap: 200px;
+    }
+
+    .updateSpecialForm__container {
+        padding: 1em 10em;
+    }
+}

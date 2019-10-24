@@ -1,0 +1,113 @@
+.page__header--list {
+    font-size: 2.5em;
+    position: relative;
+    top: 1.5em;
+    text-align: center;
+}
+
+.recipeList__container--main {
+    padding: 7.5em 0 0 0;
+}
+
+.btn--add {
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    background-color: #0ABF46;
+    color: white;
+}
+
+.btn--add:link, .btn--add:visited  {
+    padding: 7.5px 25px;
+    position: fixed;
+    right: 0.75em;
+    top: 29.25em;
+}
+
+.recipeList__btn {
+    margin-top: 1em;
+    background-color: #0ABF46;
+    color: white;
+}
+
+.recipeList__imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.recipeList__image {
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+
+.recipeList__container {
+    display: grid;
+    grid-template-areas: 'content image';
+    border-bottom: 1px solid #9e9e9e;
+    margin: 10px 5px;
+    padding-bottom: 10px;
+}
+
+.recipeList__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: content;
+    width: 150px;
+    max-width: 300px;
+    padding-left: 10px;
+}
+
+.recipeList__title--secondary {
+    padding-bottom: 5px;
+    max-width: 120px;
+}
+
+.recipeList__description {
+    max-width: 115px;
+}
+
+@media screen and (min-width: 600px) {
+    .page__header--list {
+        top: 1em;
+    }
+
+    .btn--add:link, .btn--add:visited {
+        padding: 7.5px 25px;
+        position: fixed;
+        right: 0.75em;
+        top: 25em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .recipeList__content {
+        justify-self: center;
+    }
+
+    .recipeList__container {
+        margin: 10px 50px;
+    }
+
+    .recipeList__image {
+        border-radius: 15px;
+        height: 200px;
+        width: 300px;
+    }
+
+    .recipeList__imageContainer {
+        display: flex;
+        justify-content: flex-end;
+        width: 660px;
+    }
+
+    .btn--add:link, .btn--add:visited {
+        padding: 7.5px 25px;
+        position: fixed;
+        right: 0.75em;
+        top: 25em;
+    }
+}

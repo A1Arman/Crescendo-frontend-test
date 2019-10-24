@@ -1,0 +1,210 @@
+:root {
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+.logo-svg {
+    width: 42.5px;
+    position: relative;
+    top: -1.75em;
+    text-align: center;
+}
+
+.landingPage__container--main {
+    font-size: 1.6em;
+    margin: 3.5em 0;
+    text-align: center;
+}
+
+.landingPage__container--hero {
+    background-image: url('../../images/hero-image.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+    color: white;
+}
+
+.landingPage__title {
+    font-size: 2em;
+    padding: 1em 0 0.5em 0;
+}
+
+.landingPage__description {
+    padding-bottom: 1em;
+}
+
+.landingPage__card {
+    margin: 2em 2em;
+    padding: 3em 1em;
+    border-radius: 10px;
+}
+
+.landingPage__card--content {
+    background-color: white;
+    text-align: center;
+    position: relative;
+    padding: 9em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+}
+
+.landingPage__card:hover .landingPage__card--content {
+    transform: rotateY(.5turn);
+}
+
+.landingPage__card--front,
+.landingPage__card--back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 2em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+}
+
+.landingPage__card--front {
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #0ABF46;
+    border-radius: 5px;
+}
+
+.landingPage__card--front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid #0ABF46;
+    transform: var(--level-one);
+}
+  
+.landingPage__card--body {
+    transform: var(--level-two);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+  
+.landingPage__card--back {
+    transform: rotateY(.5turn);
+    color: white;
+    background: #552C24;
+    border-radius: 5px;
+}
+
+.landingPage__card--title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .3s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.3) scaleY(1.6);
+    opacity: 0;
+}
+
+.landingPage__button {
+    margin: 1em 0 0 0;
+    background-color: #fff;
+    color: #777;
+    animation: moveInBottom .5s ease-out .5s backwards;
+}
+
+.landingPage__button::after {
+    background-color: #fff;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 81.25%;
+    }
+
+    .logo-svg {
+        top: -2.1em;
+    }
+
+    .landingPage__container--hero {
+        height: 45vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .landingPage__container--hero {
+        height: 55vh;
+        background-position: center;
+    }
+
+    .landingPage__cardContainer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .landingPage__card--content {
+        padding: 7.5em 7.5em;
+    }
+}
