@@ -55,3 +55,15 @@
 .addRecipeForm__subBtnContainer {
     text-align: center;
 }
+
+@media screen and (min-width: 992px) {
+    .addSpecialForm__btn {
+        padding: 20px 40px;
+    }
+
+    .addSpecialForm__container {
+        padding: 1em 10em;
+        display: flex;
+        flex-direction: column;
+    }
+}
